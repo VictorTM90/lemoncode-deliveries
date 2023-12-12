@@ -1,0 +1,54 @@
+@use "base" as *;
+$i: "1";
+
+:root {
+  font-family: $family-tipo
+}
+@mixin container ($base-color, $text-color: $text-primary-color, $initialElement: 1, $endElement: 4) {
+  display: flex;
+  justify-content: baseline;
+  padding: 1rem;
+  gap: 0.5rem;
+
+  .box {
+    padding: 1rem;
+    border-radius: 0.5rem;
+  }
+
+  .base-color {
+    background-color: $base-color;
+    color: $text-color;
+  }
+
+  @for $initialElement from 1 through $endElement {
+    .darken-#{$initialElement} {
+      background-color: darken($base-color, $initialElement * 5%);
+
+      & .color-box-text {
+        color: darken($text-color, $initialElement * 5%)
+      }
+    }
+
+    .lighten-#{$initialElement} {
+      background-color: lighten($base-color, $initialElement* 5%);
+
+      & .color-box-text {
+        color: lighten($text-color, $initialElement * 5%)
+      }
+    }
+  }
+}
+
+.container-1 {
+  @include container($base-color-one, $text-secondary-color);
+}
+
+.container-2 {
+  @include container($base-color-two, $text-primary-color);
+}
+
+.container-3 {
+  @include container($base-color-three, $text-accent-color);
+}
+
+

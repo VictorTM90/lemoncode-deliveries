@@ -1,0 +1,40 @@
+@use "base" as *;
+body{
+  @include bodyCenter;
+}
+.card{
+  display:grid;
+  grid-template-columns: 16rem;
+  grid-template-rows: 1fr auto 2rem;
+  padding-inline: 1rem;
+  padding-block: .5rem;
+  background-color: rgb(230, 230, 223);
+  .card-img {
+    grid-row:1/2;
+    width: 100%;
+    height: auto;
+    aspect-ratio: 4/3;
+  }
+  .card-info {
+    grid-row: 2/4;
+    display: flex;
+    flex-direction:column;
+    padding-inline:1rem;
+    padding-block-end: .5rem;
+    flex-grow:1;
+    border: 1px solid  rgb(194, 194, 190);
+    border-top:none;
+    background-color: white;
+    .card-published {
+      align-self: flex-end;
+      font-size: smaller;
+      color:$text-accent-color;
+      & strong {
+        color:$text-primary-color;
+      }
+    }
+    .card-btn {
+      @include btn-card;
+    }
+  }
+}

@@ -1,0 +1,55 @@
+@use "lightTheme" as *;
+//@use "darkTheme" as *;
+:root{
+  font-family: $font-primary;
+}
+body{
+  width: auto;
+  height: 100vh;
+  display: flex;  
+  flex-direction: column;
+  place-content:center;
+  flex-wrap: wrap;
+  box-sizing: border-box;
+}
+.exercice-2 > div{
+  padding-block-start: .5rem;
+  width: 8rem;
+  height: 8rem;
+  text-align: center;
+}
+section {
+  height: max-content;
+  width: max-content;
+  border: $base-color;
+  display: flex;  
+  flex-direction: column;
+  justify-content: center;
+  gap: 0.5rem;
+  .base, .important, .warning {
+    color: $text-primary-color
+  }
+  & * {
+    border-radius: $radius;
+  }
+  .base {
+    background-color: $base-color;
+  }
+  .important {
+    background-color: $secondary-color;
+  }
+  .warning {
+    background-color: $accent-color;
+  }
+  .box-shadow {
+    box-shadow: $shadow-box;
+  }
+  .secondary-text{
+    font-weight: $sencondary-weight;
+  }
+}
+
+
+
+
+

@@ -1,0 +1,22 @@
+$text-accent-color: rgb(106, 185, 44);
+$text-secondary-color: white;
+$text-primary-color: black;
+
+@mixin bodyCenter {
+  margin:0;
+  width: auto;
+  height: 100vh;
+  display: flex;  
+  flex-direction: column;
+  place-content:center;
+  flex-wrap: wrap;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+@mixin btn-card {
+  height: 3rem;
+  background-color: rgb(106, 185, 44);
+  border:none;
+  color:$text-secondary-color;
+  font-size: medium;
+}

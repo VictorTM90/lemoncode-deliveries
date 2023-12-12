@@ -1,0 +1,23 @@
+{
+  "name": "layout",
+  "version": "1.0.0",
+  "description": "Practica layout Master Front End XV",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "Layout",
+    "Sass",
+    "Lemoncode"
+  ],
+  "author": "Victor",
+  "license": "MIT",
+  "devDependencies": {
+    "@parcel/transformer-sass": "^2.9.3",
+    "parcel": "^2.9.3"
+  },
+  "dependencies": {
+    "sass": "^1.68.0"
+  }
+}

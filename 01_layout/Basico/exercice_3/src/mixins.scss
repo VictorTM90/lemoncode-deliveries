@@ -1,0 +1,58 @@
+@use 'base' as *;
+@mixin bodyCenter {
+  margin:0;
+  width: auto;
+  height: 100vh;
+  display: flex;  
+  flex-direction: column;
+  place-content:center;
+  flex-wrap: wrap;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+@mixin reset-list {
+  margin: 0rem;
+  padding: 0rem;
+  list-style: none;
+}
+@mixin mobileNav {
+  @include desktopNav;
+  ul { 
+    flex-flow: column wrap;
+    align-items: center;
+    justify-content: space-between;
+    li{
+      width: 100%;
+    }
+  }
+}
+@mixin desktopNav {
+  ul { 
+    @include reset-list;
+    width: 50vw;
+    display: flex;  
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    background-color: $primary-color;
+
+    li {
+      height: 3rem;
+      width: 7rem;
+      display: flex;
+      place-content: center;
+      flex-wrap: wrap;
+      box-sizing: border-box;
+      padding-inline: 1rem;
+      transition: background-color 0.2s;
+      a {
+        text-decoration: none;
+        color: $text-primary-color;
+      }
+    }
+    li:hover{
+      background-color: $accent-color;
+    }
+  }  
+}

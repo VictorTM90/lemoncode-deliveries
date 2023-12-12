@@ -1,0 +1,15 @@
+@use "mixins" as *;
+body{
+ @include bodyCenter;
+}
+.menu{
+  width: max-content;
+  height: max-content;
+  display:flex;
+  @media screen and (max-width: 950px){
+    @include mobileNav;
+  }
+  @media screen and (min-width: 950px){
+    @include desktopNav;
+  }
+}
