@@ -28,12 +28,12 @@ const deepGet = (obj: object, ...propToSearch : string[]): unknown => {
   }
   return result; 
 }
-// console.log(deepGet(myObject, "x")); // undefined
-// console.log(deepGet(myObject, "a")); // 1
-// console.log(deepGet(myObject, "b")); // { c: null, d: {....}}
-// console.log(deepGet(myObject, "b", "c")); // null
-// console.log(deepGet(myObject, "b", "d", "f", "g")); // bingo
-// console.log(deepGet(myObject));  // {a: 1, b: {...}}
+console.log(deepGet(myObject, "x")); // undefined
+console.log(deepGet(myObject, "a")); // 1
+console.log(deepGet(myObject, "b")); // { c: null, d: {....}}
+console.log(deepGet(myObject, "b", "c")); // null
+console.log(deepGet(myObject, "b", "d", "f", "g")); // bingo
+console.log(deepGet(myObject));  // {a: 1, b: {...}}
 
 const myObject2 = {}
 const deepSet = (valueProp : number , obj: object, ...keys: string[] ) : object => {

@@ -18,4 +18,4 @@ const run =  async (triggers) => {
     .then(res =>  lastExecution())
     .catch(err => console.log(err))
 };
-// run(triggers);
+run(triggers);

@@ -5,7 +5,6 @@ const expensiveFunction = () => {
 }
 
 const memoize1 = fn => {
-// falta saber si es una función o no
 if (typeof fn !== 'function') return 
   let result;
   return (()=> {

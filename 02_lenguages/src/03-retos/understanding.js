@@ -10,7 +10,7 @@ console.log(isNaNValue(NaN) && NaN !== NaN)
 const b = Infinity
 console.log(b + 1 === b - 1)
 // Cuestión 5
-// He sido vencido por la cuestión 5 
+// He sido vencido por la cuestión 5. Puede ser algún tipo de coerción de datos? 
 const c = NaN;
 console.log(c > c);
 
