@@ -11,5 +11,5 @@ Encontraréis comentarios en el código a modo de soluciones alternativas.
 
 ## Retos 
 
-En progreso. 
+Los retos están en la carpeta src/03-retos.  
 
